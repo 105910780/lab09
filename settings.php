@@ -1,9 +1,13 @@
 <?php
+$host = "localhost";
+$username = "root";
+$password = "";
+$database = "cars_db"; // Replace with your actual DB name
 
-$host = "localhost";         // because XAMPP runs the server locally
-$user = "root";          // default username for XAMPP's MySQL
-$pwd = "";              // default password is empty in XAMPP
-$sql_db = "your_db_name";  // replace with the actual name of your database
+$conn = mysqli_connect($host, $username, $password, $database);
 
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+}
 ?>
 
